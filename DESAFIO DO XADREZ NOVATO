@@ -1,0 +1,40 @@
+// novato.c
+#include <stdio.h>
+
+#define BISPO_PASSOS 5
+#define TORRE_PASSOS 5
+#define RAINHA_PASSOS 8
+
+int main(void) {
+    // Exibição inicial
+    printf("=== MateCheck - Nível Novato ===\n\n");
+
+    // Movimentação do Bispo: 5 casas na diagonal superior direita
+    printf("Bispo: mover %d casas na diagonal superior direita\n", BISPO_PASSOS);
+    for (int i = 1; i <= BISPO_PASSOS; i++) {
+        printf("Passo %d do Bispo:\n", i);
+        // imprimindo cada direção separadamente (requisito de nomenclatura)
+        printf("Cima\n");
+        printf("Direita\n");
+    }
+    printf("\n");
+
+    // Movimentação da Torre: 5 casas para a direita
+    printf("Torre: mover %d casas para a direita\n", TORRE_PASSOS);
+    for (int i = 1; i <= TORRE_PASSOS; i++) {
+        printf("Passo %d da Torre:\n", i);
+        printf("Direita\n");
+    }
+    printf("\n");
+
+    // Movimentação da Rainha: 8 casas para a esquerda
+    printf("Rainha: mover %d casas para a esquerda\n", RAINHA_PASSOS);
+    for (int i = 1; i <= RAINHA_PASSOS; i++) {
+        printf("Passo %d da Rainha:\n", i);
+        printf("Esquerda\n");
+    }
+    printf("\n");
+
+    printf("=== Fim do Nível Novato ===\n");
+    return 0;
+}
