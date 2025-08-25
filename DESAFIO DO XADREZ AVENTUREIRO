@@ -1,0 +1,33 @@
+// aventureiro.c
+#include <stdio.h>
+
+#define MOVIMENTOS 3  // quantas vezes queremos fazer um 'L' do cavalo
+
+int main(void) {
+    printf("=== MateCheck - Nível Aventureiro ===\n\n");
+
+    // Nota: Movimento em L do cavalo (no xadrez padrão é 2 por um lado e 1 por outro)
+    // Aqui vamos mover "2 para baixo" e "1 para esquerda" por movimento.
+    for (int m = 1; m <= MOVIMENTOS; m++) {
+        printf("Movimento %d do Cavalo (L: 2 Baixo + 1 Esquerda):\n", m);
+
+        int passosBaixo = 0;
+        // loop aninhado: usamos um for externo (m) e um while interno para os dois passos para baixo
+        while (passosBaixo < 2) {
+            passosBaixo++;
+            printf("Baixo\n"); // cada passo para baixo
+        }
+
+        // após descer 2, mover 1 para esquerda (usamos um pequeno loop para demonstrar repetição)
+        int passosEsquerda = 0;
+        while (passosEsquerda < 1) {
+            passosEsquerda++;
+            printf("Esquerda\n");
+        }
+
+        printf("---\n");
+    }
+
+    printf("\n=== Fim do Nível Aventureiro ===\n");
+    return 0;
+}
